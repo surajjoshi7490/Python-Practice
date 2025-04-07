@@ -1,29 +1,39 @@
 from random import choice
-Items=['rock','papper','scissor']
-tie , loose , win=0
-def rock_papper():
-    Your_item=None
-    do 
-    while True:
-        choice_value=choice(Items)
-        Your_item=input("Rock \nPapper \nScissor \nWhat is your Item Among these :-  ").lower()
-        if Your_item==choice_value:
-            print(f"Ooo It's a Tie {Your_item} and {choice_value} ")
-            tie +=tie
-        elif ( Your_item== "papper" and  choice_value== "rock" ) or \
-             ( Your_item=="scissor" and choice_value=="papper") or\
-             ( Your_item=="rock" and choice_value=="scissor"):
-            print(f"you have won {Your_item} and {choice_value} ")
-            win +=win
-        else:
-            print(f"Opps you loose {Your_item} and {choice_value}")
-            loose += loose
-        print(f"This is your score Tie:{tie}\nLoose {loose}\nwin {win} ")
 
-           
+Items = ['rock', 'paper', 'scissor']
+
+def rock_paper():
+    tie, lose, win = 0, 0, 0
     
-    #     else:
-    #         print(f"Opps Your Guess is {Your_item} and My Guess is {choice_value} ")
-    # print(f"Amazing You got the right Guess {Your_item}  , {choice_value}")
+    while True:
+        # Taking input from user
+        Your_item = input("Choose Rock, Paper, or Scissor (or type 'exit' to quit): ").lower()
+        
+        # if user wants to exit
+        if Your_item == "exit":
+            print(f"\nThanks for playing! Your final score is:")
+            print(f"Tie: {tie}, Lose: {lose}, Win: {win}")
+            break
 
-rock_papper()
+        # if user enter invalid input
+        if Your_item not in Items:
+            print("Invalid input. Please choose from rock, paper, or scissor.")
+            continue
+
+        choice_value = choice(Items)
+
+        if Your_item == choice_value:
+            tie += 1
+            print(f"Ooo it's a tie! You both chose {Your_item}.")
+        elif (Your_item == "paper" and choice_value == "rock") or \
+             (Your_item == "scissor" and choice_value == "paper") or \
+             (Your_item == "rock" and choice_value == "scissor"):
+            win += 1
+            print(f"You won! {Your_item} beats {choice_value}.")
+        else:
+            lose += 1
+            print(f"Oops, you lost! {choice_value} beats {Your_item}.")
+
+        print(f"Current Score ➤ Tie: {tie}, Lose: {lose}, Win: {win}\n")
+
+rock_paper()
