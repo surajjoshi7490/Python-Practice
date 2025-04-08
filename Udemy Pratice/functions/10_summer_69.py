@@ -1,12 +1,14 @@
-lists=(1,2,5,6,8,2,9,8)
-skip = False
-result=0
-for i in lists:
-    if i==6 :
-        skip=True
-    elif i==9 and skip:
-        skip=False
-    elif not skip :
-        result+=i
-print(result)
-# print(sum(result))  # Output: 8
+def summer_69(arr):
+    value=0
+    skip=False
+    for i in arr:
+        if i==6:
+            skip=True
+        elif i==9  and skip:
+            skip=False
+        elif not skip:
+            value+=i
+    return value
+        
+
+print(summer_69([4, 5, 6, 7, 8, 9]))

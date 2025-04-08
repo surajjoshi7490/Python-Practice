@@ -3,8 +3,7 @@ def find_33():
     for i in range(len(has_33)-1):
      if has_33[i]==3 and has_33[i+1]==3:      
         return True
-     else :
-        return False
+    return False
 print(find_33())
 
     

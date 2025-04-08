@@ -1,5 +1,5 @@
 # def blackjack(a,b,c):
-a,b,c=9,9,11
+a,b,c=9,9,9
 sum=a+b+c
 if sum<=21:
     print(sum)

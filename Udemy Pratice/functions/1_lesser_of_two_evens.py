@@ -6,5 +6,5 @@
 def is_two_even(a,b):
     if a%2==0 and b%2==0:
         return min(a,b)
-    elif a%2!=0 or b%2!=0:
+    else:
         return max(a,b)

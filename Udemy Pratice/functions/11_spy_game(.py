@@ -1,4 +1,4 @@
-lists=[1,2,4,0,7,5]
+lists=[1,2,4,0,0,7,5]
 
 code=[0,0,7]
 for num in lists:
