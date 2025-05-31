@@ -11,7 +11,7 @@ class Account:
     
     def withdraw(self,Withdrawal_amount):
         self.Withdrawal_amount=Withdrawal_amount
-        
+         
         if Withdrawal_amount<=self.balance:
             self.balance-=Withdrawal_amount
             return f"Withdrawal Accepted of :: ${Withdrawal_amount} "
@@ -24,7 +24,7 @@ class Account:
     
     
 acct1=Account("Jose",100)
-print(acct1.Account_detail())
+print(acct1.Account_detail()) 
 print(acct1.owner)
 print(acct1.balance)
 print(acct1.deposit(50))
